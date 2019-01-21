@@ -32,6 +32,7 @@ func (e Example) ServeDNS(ctx context.Context, w dns.ResponseWriter, r *dns.Msg)
 	// a slightly more complex example as to make this more interesting.
 	// Here we wrap the dns.ResponseWriter in a new ResponseWriter and call the next plugin, when the
 	// answer comes back, it will print "example".
+	fmt.Println("example")
 
 	// Debug log that we've have seen the query. This will only be shown when the debug plugin is loaded.
 	log.Debug("Received response")
